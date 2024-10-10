@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Un ejemplo completo que abarca desde fundamentos hasta optimización de CSS"
+    />
+    <title>Fundamentos y Optimización de CSS</title>
+
+    <!-- Integración de fuentes externas -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Estilos externos minificados -->
+    <style>
+      /* Fundamentos de CSS */
+      body {
+        background-color: #f4f4f4;
+        color: #333;
+        font-family: "Roboto", sans-serif;
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden; /* Evitar scroll horizontal */
+      }
+
+      h1,
+      h2 {
+        color: #2c3e50;
+        text-align: center;
+      }
+
+      p {
+        color: green;
+        font-size: 1.2rem;
+      }
+
+      /* Modelo de Caja (Box Model) */
+      .box {
+        width: 200px;
+        height: 100px;
+        padding: 10px;
+        border: 5px solid black;
+        margin: 20px auto;
+      }
+
+      /* Flexbox */
+      .container-flex {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 200px;
+        background-color: #ecf0f1;
+      }
+
+      .flex-item {
+        padding: 10px;
+        background-color: #3498db;
+        color: white;
+        margin: 0 10px;
+      }
+
+      /* Grid Layout */
+      .container-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 10px;
+        padding: 10px;
+      }
+
+      .grid-item {
+        background-color: #e74c3c;
+        color: white;
+        padding: 20px;
+        text-align: center;
+      }
+
+      /* Selectores avanzados */
+      div > p {
+        color: red;
+      }
+
+      a:hover {
+        text-decoration: underline;
+      }
+
+      /* Accesibilidad: Contraste y tamaños accesibles */
+      .high-contrast {
+        background-color: #000;
+        color: #fff;
+      }
+
+      h2 {
+        font-size: 2rem;
+      }
+
+      /* Responsividad con Media Queries */
+      @media (max-width: 768px) {
+        h2 {
+          font-size: 1.5rem;
+        }
+
+        .container-grid {
+          grid-template-columns: 1fr;
+          padding: 20px; /* Ajuste de padding en tablet */
+        }
+
+        /* Ajuste de altura mínima para evitar saltos */
+        body {
+          min-height: 100vh;
+        }
+      }
+
+      /* Imágenes responsivas */
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+
+      /* Transiciones y transformaciones */
+      .btn {
+        padding: 10px 20px;
+        background-color: #2980b9;
+        color: white;
+        border: none;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+
+      .btn:hover {
+        background-color: #3498db;
+      }
+
+      /* Animaciones */
+      @keyframes mover {
+        0% {
+          transform: translateX(0);
+        }
+        100% {
+          transform: translateX(100px);
+        }
+      }
+
+      .animate {
+        position: relative;
+        animation: mover 2s infinite alternate; /* Cambiado a alternate para evitar saltos */
+      }
+
+      /* Optimización y SEO */
+      .hidden {
+        position: absolute;
+        left: -9999px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Contenido con selectores básicos y avanzados -->
+    <h1>Ejemplo de CSS desde lo Básico hasta Avanzado</h1>
+    <h2 class="high-contrast">Accesibilidad Mejorada</h2>
+    <p>Este es un párrafo básico con color verde.</p>
+    <div class="box">Caja con Modelo de Caja</div>
+
+    <!-- Flexbox Layout -->
+    <div class="container-flex">
+      <div class="flex-item">Item 1</div>
+      <div class="flex-item">Item 2</div>
+      <div class="flex-item">Item 3</div>
+    </div>
+
+    <!-- Grid Layout -->
+    <div class="container-grid">
+      <div class="grid-item">1</div>
+      <div class="grid-item">2</div>
+      <div class="grid-item">3</div>
+    </div>
+
+    <!-- Botón con transición -->
+    <button class="btn">Hover me</button>
+
+    <!-- Animación -->
+    <div class="animate">Elemento Animado</div>
+
+    <!-- Imagen Responsiva -->
+    <img src="https://via.placeholder.com/600x300" alt="Imagen de ejemplo" />
+  </body>
+</html>
